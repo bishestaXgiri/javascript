@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delightful Ice Cream</title>
+    <!-- ✅ Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ✅ Custom Styles -->
+    <style>
+        body {
+            background-color: #fff8f0;
+        }
+
+        #main-header {
+            background-color: #ffb6c1;
+            color: #fff;
+            padding: 60px 20px;
+        }
+
+        #main-header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            color: #ff69b4;
+            border-bottom: 2px solid #ffc0cb;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        #site-footer {
+            background-color: #ffe4e1;
+            color: #555;
+            padding: 20px 0;
+        }
+
+        a {
+            color: #d63384;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Scroll to Top Button */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 20px;
+            display: none;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header" class="text-center">
+        <div class="container">
+            <h1>🍦 Delightful Ice Cream</h1>
+            <p class="lead">Welcome to the sweetest place on the web!</p>
+        </div>
+    </header>
+    <!-- Flavors Section -->
+    <section class="py-5" id="flavors">
+        <div class="container">
+            <h2 class="section-title">Our Flavors</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                <div class="col">
+                    <div class="card h-100 border-pink flavor-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Vanilla</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-pink flavor-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-pink flavor-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Strawberry</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-pink flavor-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Mint Chocolate Chip</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-pink flavor-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cookies & Cream</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-5 bg-light" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p class="fs-5">We serve freshly made, 100% organic ice cream. Every scoop is made with love and the finest ingredients.</p>
+        </div>
+    </section>
+    <!-- Gallery Section -->
+    <section class="py-5" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p>Here are some of our delicious creations:</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://c.ndtvimg.com/2023-02/egi0l8i_ice-cream_625x300_17_February_23.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=675" alt="Ice Cream 1" class="card-img-top gallery-img" title="Ice Cream 1">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzpzabBqqp1oox_AKJR7trjO8zwScCGccBDjPszW9BQ-pbBYeaLEVfOilpIy3SqdvmGWM&usqp=CAU" alt="Ice Cream 2" class="card-img-top gallery-img" title="Ice Cream 2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://www.keep-calm-and-eat-ice-cream.com/wp-content/uploads/2022/11/Choc-chip-mint-ice-cream-hero-2.jpg" alt="Ice Cream 3" class="card-img-top gallery-img" title="Ice Cream 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="py-5 bg-light" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <ul class="list-unstyled fs-5">
+                <li><strong>Email:</strong> <a href="mailto:info@delightfulicecream.com">info@delightfulicecream.com</a></li>
+                <li><strong>Phone:</strong> +1 234 567 8901</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer id="site-footer" class="text-center">
+        <div class="container">
+            <p>&copy; 2025 Delightful Ice Cream. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+    <!--  Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        // Flavor Card Click Event
+        document.querySelectorAll('.flavor-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const flavor = card.querySelector('.card-title').innerText;
+                alert(`Yum! You selected ${flavor} flavor 🍨`);
+            });
+        });
+        // Scroll-to-Top Button Logic
+        const scrollBtn = document.getElementById('scrollTopBtn');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+        scrollBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+</body>
+</html>
